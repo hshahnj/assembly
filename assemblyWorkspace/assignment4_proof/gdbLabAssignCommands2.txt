@@ -1,0 +1,48 @@
+echo \n\n
+break 59
+break 67
+break 75
+break 83
+run
+set pagination off
+set logging file out.txt
+set logging overwrite
+set prompt
+echo -----\n
+echo display variable \n
+n
+p (char)bVar1
+p $al
+n
+p (char)bVar2
+p $al
+n
+p (char)bResult
+n
+p (short int)wVar1
+p $ax
+n
+p (short int)wVar2
+p $ax
+n
+p (short int)wResult
+n
+p (int)dVar1
+p $eax
+n
+p (int)dVar2
+p $eax
+n
+p (int)dResult
+n
+p (long)qVar1
+p $rax
+n
+p (long)qVar2
+p $rax
+n
+p (long)qResult
+c
+echo -----\n
+set logging off
+quit
