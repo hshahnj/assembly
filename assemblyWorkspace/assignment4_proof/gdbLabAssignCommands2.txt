@@ -7,6 +7,7 @@ run
 set pagination off
 set logging file out.txt
 set logging overwrite
+set logging on
 set prompt
 echo -----\n
 echo display variable \n
