@@ -1,0 +1,55 @@
+(gdb) 
+
+(gdb) Breakpoint 1 at 0x4000b0: file exampleProg.asm, line 59.
+(gdb) Breakpoint 2 at 0x4000c5: file exampleProg.asm, line 67.
+(gdb) Breakpoint 3 at 0x4000dd: file exampleProg.asm, line 75.
+(gdb) Breakpoint 4 at 0x4000f2: file exampleProg.asm, line 83.
+(gdb) Starting program: /home/shah/Documents/assembly/assemblyWorkspace/exampleProg 
+
+Breakpoint 1, _start () at exampleProg.asm:59
+59		mov	al, byte [bVar1]
+(gdb) (gdb) (gdb) (gdb) -----
+display variable 
+60		add	al, byte [bVar2]
+$1 = 17 '\021'
+$2 = 17
+61		mov	byte [bResult], al
+$3 = 9 '\t'
+$4 = 26
+
+Breakpoint 2, _start () at exampleProg.asm:67
+67		mov	ax, word [wVar1]
+$5 = 26 '\032'
+68		add	ax, word [wVar2]
+$6 = 17000
+$7 = 17000
+69		mov	word [wResult], ax
+$8 = 9000
+$9 = 26000
+
+Breakpoint 3, _start () at exampleProg.asm:75
+75		mov	eax, dword [dVar1]
+$10 = 26000
+76		add	eax, dword [dVar2]
+$11 = 17000000
+$12 = 17000000
+77		mov	dword [dResult], eax
+$13 = 9000000
+$14 = 26000000
+
+Breakpoint 4, _start () at exampleProg.asm:83
+83		mov	rax, qword [qVar1]
+$15 = 26000000
+84		add	rax, qword [qVar2]
+$16 = 170000000
+$17 = 170000000
+85		mov	qword [qResult], rax
+$18 = 90000000
+$19 = 260000000
+last () at exampleProg.asm:91
+91		mov	rax, SYS_exit		; Call code for exit
+$20 = 260000000
+Continuing.
+[Inferior 1 (process 9880) exited normally]
+-----
+
